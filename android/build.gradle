@@ -9,9 +9,4 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+// Блок allprojects удален, так как он теперь в settings.gradle
