@@ -1,0 +1,6 @@
+{
+  "name": "Learn2Unlock",
+  "description": "Умный экран блокировки, который превращает экранное время в время для развития с помощью ИИ.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}

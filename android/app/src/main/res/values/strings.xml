@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Learn2Unlock</string>
+    <string name="accessibility_description">This service is used to detect when educational tasks should be displayed over other apps to help children learn.</string>
+    <string name="parent_pin_hint">Enter Parent PIN</string>
+</resources>
