@@ -19,12 +19,18 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: 8.1.1 # Принудительно ставим нужную версию
+          gradle-version: 8.1.1
 
       - name: Build with Gradle
         run: |
           cd android
-          # Запускаем сборку напрямую через установленный gradle
-          gradle assembleDebug --stacktrace
+          # Пробуем собрать и выводим максимум информации при ошибке
+          gradle assembleDebug --stacktrace --info
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Learn2Unlock-Debug-APK
+          path: android/app/build/outputs/apk/debug/app-debug.apk
